@@ -1,0 +1,30 @@
+﻿Public Class BaseDeck2ed
+    Public Shared cards As New List(Of String) From {
+        "02.2.Cellar",
+        "02.2.Chapel",
+        "02.2.Moat",
+        "03.3.Harbinger",
+        "03.3.Merchant",
+        "03.3.Vassal",
+        "03.3.Village",
+        "03.3.Workshop",
+        "04.4.Beureaucrat",
+        "04.4.Gardens",
+        "04.4.Militia",
+        "04.4.Moneylender",
+        "04.4.Poacher",
+        "04.4.Remodel",
+        "04.4.Smithy",
+        "04.4.Throne Room",
+        "05.5.Bandit",
+        "05.5.Council Room",
+        "05.5.Festival",
+        "05.5.Laboratory",
+        "05.5.Library",
+        "05.5.Market",
+        "05.5.Mine",
+        "05.5.Sentry",
+        "05.5.Witch",
+        "06.6.Artisan"
+    }
+End Class
