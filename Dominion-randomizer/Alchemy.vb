@@ -1,6 +1,6 @@
 ﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
 Public Class Alchemy
-    Public Shared cards As New List(Of String) From {
+    Public Shared cards As New SortedSet(Of String) From {
         "00.Transmute.P.0.0",
         "00.Vineyard.P.0.0",
         "02.Herbalist.2.0.0",

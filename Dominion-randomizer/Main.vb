@@ -20,8 +20,8 @@
 'SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Public Class Main
-    Dim pool_list As New List(Of String)
-    Dim ret_list As New List(Of String)
+    Dim pool_list As New SortedSet(Of String)
+    Dim ret_list As New SortedSet(Of String)
     Dim rnd = New Random()
     Dim veto_flag As Boolean = 0
     Dim split_line As String = "---New cards---"
@@ -48,14 +48,17 @@ Public Class Main
         Return_list.Items.Clear()
         Error_lbl.Visible = 0
         veto_flag = 0
-        If Basedeck_check.Checked Then
-            pool_list.AddRange(BaseSet2ed.cards)
+        If BaseSet1ed_check.Checked Then
+            pool_list.UnionWith(BaseSet.cards_1ed)
+        End If
+        If BaseSet2ed_check.Checked Then
+            pool_list.UnionWith(BaseSet.cards_2ed)
         End If
         If Alchemy_check.Checked Then
-            pool_list.AddRange(Alchemy.cards)
+            pool_list.UnionWith(Alchemy.cards)
         End If
         If Prosperity_check.Checked Then
-            pool_list.AddRange(Prosperity.cards)
+            pool_list.UnionWith(Prosperity.cards)
         End If
         If pool_list.Count > 0 Then
             If Veto_attack_check.Checked Then
@@ -69,7 +72,6 @@ Public Class Main
                 ret_list.Add(picked_card)
                 pool_list.Remove(picked_card)
             Next
-            ret_list.Sort()
             For Each item As String In ret_list
                 Dim isolated_card_values = Split(item, ".")
                 Return_list.Items.Add("Cost: " & isolated_card_values(2) & " " & isolated_card_values(1))

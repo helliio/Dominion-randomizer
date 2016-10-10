@@ -1,6 +1,6 @@
 ﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
 Public Class Prosperity
-    Public Shared cards As New List(Of String) From {
+    Public Shared cards As New SortedSet(Of String) From {
         "03.Loan.3.0.0",
         "03.Trade Route.3.0.0",
         "03.Watchtower.3.0.0",
