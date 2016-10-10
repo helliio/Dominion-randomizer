@@ -1,4 +1,4 @@
-﻿Public Class BaseDeck2ed
+﻿Public Class BaseSet2ed
     Public Shared cards As New List(Of String) From {
         "02.Cellar.2",
         "02.Chapel.2",

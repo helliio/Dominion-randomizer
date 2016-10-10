@@ -55,9 +55,9 @@ Partial Class Main
         Me.Basedeck_check.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Basedeck_check.Location = New System.Drawing.Point(13, 13)
         Me.Basedeck_check.Name = "Basedeck_check"
-        Me.Basedeck_check.Size = New System.Drawing.Size(79, 17)
+        Me.Basedeck_check.Size = New System.Drawing.Size(69, 17)
         Me.Basedeck_check.TabIndex = 2
-        Me.Basedeck_check.Text = "Base Deck"
+        Me.Basedeck_check.Text = "Base Set"
         Me.Basedeck_check.UseVisualStyleBackColor = True
         '
         'Alchemy_check

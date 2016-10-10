@@ -33,7 +33,7 @@ Public Class Main
         Error_lbl.Visible = 0
         veto_flag = 0
         If Basedeck_check.Checked Then
-            pool_list.AddRange(BaseDeck2ed.cards)
+            pool_list.AddRange(BaseSet2ed.cards)
         End If
         If Alchemy_check.Checked Then
             pool_list.AddRange(Alchemy.cards)
