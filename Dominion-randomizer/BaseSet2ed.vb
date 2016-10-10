@@ -1,4 +1,4 @@
-﻿'Format: <sort prio>.<name>.<cost>.<is attacking>.<is curser>
+﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
 Public Class BaseSet2ed
     Public Shared cards As New List(Of String) From {
         "02.Cellar.2.0.0",

@@ -1,4 +1,4 @@
-﻿'Format: <sort prio>.<name>.<cost>.<is attacking>.<is curser>
+﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
 Public Class Alchemy
     Public Shared cards As New List(Of String) From {
         "00.Transmute.P.0.0",

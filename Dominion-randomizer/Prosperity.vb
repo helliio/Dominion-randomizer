@@ -1,4 +1,4 @@
-﻿'Format: <sort prio>.<name>.<cost>.<is attacking>.<is curser>
+﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
 Public Class Prosperity
     Public Shared cards As New List(Of String) From {
         "03.Loan.3.0.0",

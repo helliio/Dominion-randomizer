@@ -106,9 +106,9 @@ Partial Class Main
         Me.Veto_attack_check.AutoSize = True
         Me.Veto_attack_check.Location = New System.Drawing.Point(230, 154)
         Me.Veto_attack_check.Name = "Veto_attack_check"
-        Me.Veto_attack_check.Size = New System.Drawing.Size(94, 17)
+        Me.Veto_attack_check.Size = New System.Drawing.Size(123, 17)
         Me.Veto_attack_check.TabIndex = 7
-        Me.Veto_attack_check.Text = "Veto all attack"
+        Me.Veto_attack_check.Text = "Veto all attack cards"
         Me.Veto_attack_check.UseVisualStyleBackColor = True
         '
         'Veto_curser_check
@@ -116,9 +116,9 @@ Partial Class Main
         Me.Veto_curser_check.AutoSize = True
         Me.Veto_curser_check.Location = New System.Drawing.Point(230, 131)
         Me.Veto_curser_check.Name = "Veto_curser_check"
-        Me.Veto_curser_check.Size = New System.Drawing.Size(93, 17)
+        Me.Veto_curser_check.Size = New System.Drawing.Size(122, 17)
         Me.Veto_curser_check.TabIndex = 8
-        Me.Veto_curser_check.Text = "Veto all curser"
+        Me.Veto_curser_check.Text = "Veto all curser cards"
         Me.Veto_curser_check.UseVisualStyleBackColor = True
         '
         'Main
