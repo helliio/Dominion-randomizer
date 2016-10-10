@@ -61,6 +61,9 @@ Public Class Main
             If Veto_attack_check.Checked Then
                 veto_type(3)
             End If
+            If Veto_curser_check.Checked Then
+                veto_type(4)
+            End If
             For index As Integer = 0 To 9
                 Dim picked_card = pool_list(rnd.Next(0, pool_list.Count))
                 ret_list.Add(picked_card)
