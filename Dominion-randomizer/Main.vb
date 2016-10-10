@@ -50,7 +50,7 @@ Public Class Main
             ret_list.Sort()
             For Each item As String In ret_list
                 Dim isolated_card_values = Split(item, ".")
-                Return_list.Items.Add("Cost: " & isolated_card_values(1) & " " & isolated_card_values(2))
+                Return_list.Items.Add("Cost: " & isolated_card_values(2) & " " & isolated_card_values(1))
             Next
         Else
             Error_lbl.Text = "No expantions selected"
@@ -69,7 +69,7 @@ Public Class Main
             Dim picked_card As String = pool_list(rnd.Next(0, pool_list.Count))
             pool_list.Remove(picked_card)
             Dim isolated_card_values = Split(picked_card, ".")
-            Return_list.Items.Add("Cost: " & isolated_card_values(1) & " " & isolated_card_values(2))
+            Return_list.Items.Add("Cost: " & isolated_card_values(2) & " " & isolated_card_values(1))
         ElseIf Return_list.SelectedIndex < 0 And pool_list.Count > 0 Or Return_list.SelectedItem = split_line Then
             Error_lbl.Text = "No cards selected"
             Error_lbl.Visible = 1
