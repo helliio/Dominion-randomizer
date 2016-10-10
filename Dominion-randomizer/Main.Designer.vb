@@ -29,6 +29,7 @@ Partial Class Main
         Me.Veto_btn = New System.Windows.Forms.Button()
         Me.Error_lbl = New System.Windows.Forms.Label()
         Me.Prosperity_check = New System.Windows.Forms.CheckBox()
+        Me.Veto_attack_check = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Generate_btn
@@ -82,7 +83,7 @@ Partial Class Main
         'Error_lbl
         '
         Me.Error_lbl.AutoSize = True
-        Me.Error_lbl.Location = New System.Drawing.Point(227, 161)
+        Me.Error_lbl.Location = New System.Drawing.Point(227, 138)
         Me.Error_lbl.Name = "Error_lbl"
         Me.Error_lbl.Size = New System.Drawing.Size(45, 13)
         Me.Error_lbl.TabIndex = 5
@@ -99,11 +100,22 @@ Partial Class Main
         Me.Prosperity_check.Text = "Prosperity"
         Me.Prosperity_check.UseVisualStyleBackColor = True
         '
+        'Veto_attack_check
+        '
+        Me.Veto_attack_check.AutoSize = True
+        Me.Veto_attack_check.Location = New System.Drawing.Point(230, 154)
+        Me.Veto_attack_check.Name = "Veto_attack_check"
+        Me.Veto_attack_check.Size = New System.Drawing.Size(94, 17)
+        Me.Veto_attack_check.TabIndex = 7
+        Me.Veto_attack_check.Text = "Veto all attack"
+        Me.Veto_attack_check.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(360, 239)
+        Me.Controls.Add(Me.Veto_attack_check)
         Me.Controls.Add(Me.Prosperity_check)
         Me.Controls.Add(Me.Error_lbl)
         Me.Controls.Add(Me.Veto_btn)
@@ -128,4 +140,5 @@ Partial Class Main
     Friend WithEvents Veto_btn As Button
     Friend WithEvents Error_lbl As Label
     Friend WithEvents Prosperity_check As CheckBox
+    Friend WithEvents Veto_attack_check As CheckBox
 End Class

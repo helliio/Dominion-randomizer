@@ -26,6 +26,22 @@ Public Class Main
     Dim veto_flag As Boolean = 0
     Dim split_line As String = "---New cards---"
 
+    'Veto_type removes cards from pool_list with a certain type only usable if input variable is >= 3
+    Sub veto_type(n As Integer)
+        If n >= 3 Then
+            Dim veto_list As New List(Of String)
+            For Each item As String In pool_list
+                Dim isolated_card_values = Split(item, ".")
+                If isolated_card_values(n) = 1 Then
+                    veto_list.Add(item)
+                End If
+            Next
+            For Each item As String In veto_list
+                pool_list.Remove(item)
+            Next
+        End If
+    End Sub
+
     Private Sub Generate_btn_Click(sender As Object, e As EventArgs) Handles Generate_btn.Click
         pool_list.Clear()
         ret_list.Clear()
@@ -42,6 +58,9 @@ Public Class Main
             pool_list.AddRange(Prosperity.cards)
         End If
         If pool_list.Count > 0 Then
+            If Veto_attack_check.Checked Then
+                veto_type(3)
+            End If
             For index As Integer = 0 To 9
                 Dim picked_card = pool_list(rnd.Next(0, pool_list.Count))
                 ret_list.Add(picked_card)
