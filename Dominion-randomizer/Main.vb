@@ -49,9 +49,11 @@ Public Class Main
         Error_lbl.Visible = 0
         veto_flag = 0
         If BaseSet1ed_check.Checked Then
+            pool_list.UnionWith(BaseSet.cards_common)
             pool_list.UnionWith(BaseSet.cards_1ed)
         End If
         If BaseSet2ed_check.Checked Then
+            pool_list.UnionWith(BaseSet.cards_common)
             pool_list.UnionWith(BaseSet.cards_2ed)
         End If
         If Alchemy_check.Checked Then
