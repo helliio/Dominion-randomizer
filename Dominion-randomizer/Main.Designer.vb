@@ -32,6 +32,7 @@ Partial Class Main
         Me.Veto_attack_check = New System.Windows.Forms.CheckBox()
         Me.Veto_curser_check = New System.Windows.Forms.CheckBox()
         Me.BaseSet2ed_check = New System.Windows.Forms.CheckBox()
+        Me.DarkAges_check = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Generate_btn
@@ -132,11 +133,22 @@ Partial Class Main
         Me.BaseSet2ed_check.Text = "Base Set 2 ed."
         Me.BaseSet2ed_check.UseVisualStyleBackColor = True
         '
+        'DarkAges_check
+        '
+        Me.DarkAges_check.AutoSize = True
+        Me.DarkAges_check.Location = New System.Drawing.Point(116, 13)
+        Me.DarkAges_check.Name = "DarkAges_check"
+        Me.DarkAges_check.Size = New System.Drawing.Size(76, 17)
+        Me.DarkAges_check.TabIndex = 10
+        Me.DarkAges_check.Text = "Dark Ages"
+        Me.DarkAges_check.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(360, 263)
+        Me.Controls.Add(Me.DarkAges_check)
         Me.Controls.Add(Me.BaseSet2ed_check)
         Me.Controls.Add(Me.Veto_curser_check)
         Me.Controls.Add(Me.Veto_attack_check)
@@ -167,4 +179,5 @@ Partial Class Main
     Friend WithEvents Veto_attack_check As CheckBox
     Friend WithEvents Veto_curser_check As CheckBox
     Friend WithEvents BaseSet2ed_check As CheckBox
+    Friend WithEvents DarkAges_check As CheckBox
 End Class

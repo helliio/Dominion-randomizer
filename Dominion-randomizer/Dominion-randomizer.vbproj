@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Alchemy.vb" />
     <Compile Include="BaseSet.vb" />
+    <Compile Include="DarkAges.vb" />
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>

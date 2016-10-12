@@ -60,6 +60,9 @@ Public Class Main
         If Prosperity_check.Checked Then
             pool_list.UnionWith(Prosperity.cards)
         End If
+        If DarkAges_check.Checked Then
+            pool_list.UnionWith(DarkAges.cards)
+        End If
         If pool_list.Count > 0 Then
             If Veto_attack_check.Checked Then
                 veto_type(3)
