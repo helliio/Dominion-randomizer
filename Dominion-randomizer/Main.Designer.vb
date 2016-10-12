@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Main
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Generate_btn = New System.Windows.Forms.Button()
         Me.Return_list = New System.Windows.Forms.ListBox()
@@ -33,12 +33,11 @@ Partial Class Main
         Me.Veto_curser_check = New System.Windows.Forms.CheckBox()
         Me.BaseSet2ed_check = New System.Windows.Forms.CheckBox()
         Me.DarkAges_check = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Generate_btn
         '
-        Me.Generate_btn.Location = New System.Drawing.Point(228, 242)
+        Me.Generate_btn.Location = New System.Drawing.Point(227, 229)
         Me.Generate_btn.Name = "Generate_btn"
         Me.Generate_btn.Size = New System.Drawing.Size(123, 23)
         Me.Generate_btn.TabIndex = 0
@@ -48,7 +47,7 @@ Partial Class Main
         'Return_list
         '
         Me.Return_list.FormattingEnabled = True
-        Me.Return_list.Location = New System.Drawing.Point(12, 118)
+        Me.Return_list.Location = New System.Drawing.Point(12, 105)
         Me.Return_list.Name = "Return_list"
         Me.Return_list.Size = New System.Drawing.Size(209, 147)
         Me.Return_list.TabIndex = 1
@@ -77,7 +76,7 @@ Partial Class Main
         '
         'Veto_btn
         '
-        Me.Veto_btn.Location = New System.Drawing.Point(228, 213)
+        Me.Veto_btn.Location = New System.Drawing.Point(227, 200)
         Me.Veto_btn.Name = "Veto_btn"
         Me.Veto_btn.Size = New System.Drawing.Size(122, 23)
         Me.Veto_btn.TabIndex = 4
@@ -87,7 +86,7 @@ Partial Class Main
         'Error_lbl
         '
         Me.Error_lbl.AutoSize = True
-        Me.Error_lbl.Location = New System.Drawing.Point(225, 151)
+        Me.Error_lbl.Location = New System.Drawing.Point(224, 138)
         Me.Error_lbl.Name = "Error_lbl"
         Me.Error_lbl.Size = New System.Drawing.Size(45, 13)
         Me.Error_lbl.TabIndex = 5
@@ -107,7 +106,7 @@ Partial Class Main
         'Veto_attack_check
         '
         Me.Veto_attack_check.AutoSize = True
-        Me.Veto_attack_check.Location = New System.Drawing.Point(228, 167)
+        Me.Veto_attack_check.Location = New System.Drawing.Point(227, 154)
         Me.Veto_attack_check.Name = "Veto_attack_check"
         Me.Veto_attack_check.Size = New System.Drawing.Size(123, 17)
         Me.Veto_attack_check.TabIndex = 7
@@ -117,7 +116,7 @@ Partial Class Main
         'Veto_curser_check
         '
         Me.Veto_curser_check.AutoSize = True
-        Me.Veto_curser_check.Location = New System.Drawing.Point(228, 190)
+        Me.Veto_curser_check.Location = New System.Drawing.Point(227, 177)
         Me.Veto_curser_check.Name = "Veto_curser_check"
         Me.Veto_curser_check.Size = New System.Drawing.Size(122, 17)
         Me.Veto_curser_check.TabIndex = 8
@@ -144,21 +143,11 @@ Partial Class Main
         Me.DarkAges_check.Text = "Dark Ages"
         Me.DarkAges_check.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 102)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 13)
-        Me.Label1.TabIndex = 11
-        Me.Label1.Text = "No react cards will be selected if no attack cards are spawed"
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(360, 277)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(360, 259)
         Me.Controls.Add(Me.DarkAges_check)
         Me.Controls.Add(Me.BaseSet2ed_check)
         Me.Controls.Add(Me.Veto_curser_check)
@@ -191,5 +180,4 @@ Partial Class Main
     Friend WithEvents Veto_curser_check As CheckBox
     Friend WithEvents BaseSet2ed_check As CheckBox
     Friend WithEvents DarkAges_check As CheckBox
-    Friend WithEvents Label1 As Label
 End Class
