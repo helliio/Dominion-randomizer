@@ -25,9 +25,10 @@ Public Class Main
     Dim rnd = New Random()
     Dim veto_flag As Boolean = 0
     Dim split_line As String = "---New cards---"
+    Dim egg As New EasterEgg
 
     'Veto_type removes cards from pool_list with a certain type only usable if input variable is >= 3
-    Sub veto_type(n As Integer)
+    Sub Veto_type(n As Integer)
         If n >= 3 Then
             Dim veto_list As New List(Of String)
             For Each item As String In pool_list
@@ -48,6 +49,8 @@ Public Class Main
         Return_list.Items.Clear()
         Error_lbl.Visible = 0
         veto_flag = 0
+        egg.Clear()
+
         If BaseSet1ed_check.Checked Then
             pool_list.UnionWith(BaseSet.cards_common)
             pool_list.UnionWith(BaseSet.cards_1ed)
@@ -106,5 +109,8 @@ Public Class Main
             Error_lbl.Text = "Not enough cards in pool"
             Error_lbl.Visible = 1
         End If
+    End Sub
+    Private Sub Error_lbl_Click(sender As Object, e As EventArgs) Handles Error_lbl.Click
+        egg.Trigger()
     End Sub
 End Class
