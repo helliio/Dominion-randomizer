@@ -24,12 +24,14 @@ Public Class EasterEgg
     Private egg As Integer = 1
     Private strHostName As String
     Private strIPAddress As String
-    Sub New()
+    Private counter As Integer
+    Sub New(n As Integer)
+        counter = n
         strHostName = System.Net.Dns.GetHostName()
         strIPAddress = System.Net.Dns.GetHostEntry(strHostName).AddressList(0).ToString()
     End Sub
     Public Sub Trigger()
-        If egg < 5 Then
+        If egg < counter Then
             egg += 1
         Else
             MsgBox("Your IP Address is " & strIPAddress & " CSI: New York has been notified", , "You are the killer")
