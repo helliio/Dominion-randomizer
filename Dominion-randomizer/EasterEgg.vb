@@ -25,7 +25,7 @@ Public Class EasterEgg
     Private strHostName As String
     Private strIPAddress As String
     Private counter As Integer
-    Sub New(n As Integer)
+    Sub New(Optional n As Integer = 0)
         counter = n
         strHostName = System.Net.Dns.GetHostName()
         strIPAddress = System.Net.Dns.GetHostEntry(strHostName).AddressList(0).ToString()
