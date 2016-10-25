@@ -1,6 +1,6 @@
 ﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
-Public Class DarkAges
-    Public Shared cards As New SortedSet(Of String) From {
+Public Module DarkAges
+    Public cards As New SortedSet(Of String) From {
         "01.Poor House.1.0.0",
         "02.Beggar.2.0.0",
         "02.Squire.2.0.0",
@@ -37,4 +37,4 @@ Public Class DarkAges
         "06.Altar.5.0.0",
         "06.Hunting Grounds.6.0.0"
     }
-End Class
+End Module

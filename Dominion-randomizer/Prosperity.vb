@@ -1,6 +1,6 @@
 ﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
-Public Class Prosperity
-    Public Shared cards As New SortedSet(Of String) From {
+Public Module Prosperity
+    Public cards As New SortedSet(Of String) From {
         "03.Loan.3.0.0",
         "03.Trade Route.3.0.0",
         "03.Watchtower.3.0.0",
@@ -27,4 +27,4 @@ Public Class Prosperity
         "07.King's Court.7.0.0",
         "08.Peddler.8*.0.0"
     }
-End Class
+End Module
