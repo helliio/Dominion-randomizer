@@ -22,6 +22,7 @@
 Public Class Main
     Dim pool_list As New SortedSet(Of String)
     Dim ret_list As New SortedSet(Of String)
+    Dim temp_list As New SortedSet(Of String)
     Dim rnd = New Random()
     Dim veto_flag As Boolean = 0
     Dim split_line As String = "---New cards---"
@@ -43,10 +44,34 @@ Public Class Main
         End If
     End Sub
 
+    Sub Main_exp(ByVal expantion As SortedSet(Of String))
+        Dim exp_list As New SortedSet(Of String)
+        exp_list.UnionWith(expantion)
+        For index As Integer = 0 To 4
+            Dim picked_card = exp_list(rnd.Next(0, exp_list.Count))
+            ret_list.Add(picked_card)
+            exp_list.Remove(picked_card)
+            pool_list.Remove(picked_card)
+        Next
+        For index As Integer = 5 To 9
+            Dim picked_card = pool_list(rnd.Next(0, pool_list.Count))
+            ret_list.Add(picked_card)
+            pool_list.Remove(picked_card)
+        Next
+    End Sub
+
+    Sub Radio_state_change(r As RadioButton, c As CheckBox)
+        If r.Checked Then
+            RadioButtonNone.Checked = 1
+        End If
+        r.Enabled = c.Checked
+    End Sub
+
     Private Sub Generate_btn_Click(sender As Object, e As EventArgs) Handles Generate_btn.Click
         pool_list.Clear()
         ret_list.Clear()
         Return_list.Items.Clear()
+        temp_list.Clear()
         Error_lbl.Visible = 0
         veto_flag = 0
         egg.Clear()
@@ -75,11 +100,29 @@ Public Class Main
             If Veto_curser_check.Checked Then
                 veto_type(4)
             End If
-            For index As Integer = 0 To 9
-                Dim picked_card = pool_list(rnd.Next(0, pool_list.Count))
-                ret_list.Add(picked_card)
-                pool_list.Remove(picked_card)
-            Next
+            If RadioButtonNone.Checked Then
+                For index As Integer = 0 To 9
+                    Dim picked_card = pool_list(rnd.Next(0, pool_list.Count))
+                    ret_list.Add(picked_card)
+                    pool_list.Remove(picked_card)
+                Next
+            ElseIf RadioButtonBase1.Checked Then
+                temp_list.UnionWith(BaseSet.cards_common)
+                temp_list.UnionWith(BaseSet.cards_1ed)
+                Main_exp(temp_list)
+                temp_list.Clear()
+            ElseIf RadioButtonBase2.Checked Then
+                temp_list.UnionWith(BaseSet.cards_common)
+                temp_list.UnionWith(BaseSet.cards_2ed)
+                Main_exp(temp_list)
+                temp_list.Clear()
+            ElseIf RadioButtonAlchemy.Checked Then
+                Main_exp(Alchemy.cards)
+            ElseIf RadioButtonProsperity.Checked Then
+                Main_exp(Prosperity.cards)
+            ElseIf RadioButtonDarkAges.Checked Then
+                Main_exp(DarkAges.cards)
+            End If
             For Each item As String In ret_list
                 Dim isolated_card_values = Split(item, ".")
                 Return_list.Items.Add("Cost: " & isolated_card_values(2) & " " & isolated_card_values(1))
@@ -112,5 +155,25 @@ Public Class Main
     End Sub
     Private Sub Error_lbl_Click(sender As Object, e As EventArgs) Handles Error_lbl.Click
         egg.Trigger()
+    End Sub
+
+    Private Sub BaseSet1ed_check_CheckedChanged(sender As Object, e As EventArgs) Handles BaseSet1ed_check.CheckedChanged
+        Radio_state_change(RadioButtonBase1, BaseSet1ed_check)
+    End Sub
+
+    Private Sub BaseSet2ed_check_CheckedChanged(sender As Object, e As EventArgs) Handles BaseSet2ed_check.CheckedChanged
+        Radio_state_change(RadioButtonBase2, BaseSet2ed_check)
+    End Sub
+
+    Private Sub Alchemy_check_CheckedChanged(sender As Object, e As EventArgs) Handles Alchemy_check.CheckedChanged
+        Radio_state_change(RadioButtonAlchemy, Alchemy_check)
+    End Sub
+
+    Private Sub Prosperity_check_CheckedChanged(sender As Object, e As EventArgs) Handles Prosperity_check.CheckedChanged
+        Radio_state_change(RadioButtonProsperity, Prosperity_check)
+    End Sub
+
+    Private Sub DarkAges_check_CheckedChanged(sender As Object, e As EventArgs) Handles DarkAges_check.CheckedChanged
+        Radio_state_change(RadioButtonDarkAges, DarkAges_check)
     End Sub
 End Class

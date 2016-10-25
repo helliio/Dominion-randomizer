@@ -33,11 +33,17 @@ Partial Class Main
         Me.Veto_curser_check = New System.Windows.Forms.CheckBox()
         Me.BaseSet2ed_check = New System.Windows.Forms.CheckBox()
         Me.DarkAges_check = New System.Windows.Forms.CheckBox()
+        Me.RadioButtonNone = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonBase1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonBase2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonAlchemy = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonProsperity = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonDarkAges = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'Generate_btn
         '
-        Me.Generate_btn.Location = New System.Drawing.Point(227, 229)
+        Me.Generate_btn.Location = New System.Drawing.Point(227, 251)
         Me.Generate_btn.Name = "Generate_btn"
         Me.Generate_btn.Size = New System.Drawing.Size(123, 23)
         Me.Generate_btn.TabIndex = 0
@@ -47,7 +53,7 @@ Partial Class Main
         'Return_list
         '
         Me.Return_list.FormattingEnabled = True
-        Me.Return_list.Location = New System.Drawing.Point(12, 105)
+        Me.Return_list.Location = New System.Drawing.Point(12, 127)
         Me.Return_list.Name = "Return_list"
         Me.Return_list.Size = New System.Drawing.Size(209, 147)
         Me.Return_list.TabIndex = 1
@@ -57,7 +63,7 @@ Partial Class Main
         Me.BaseSet1ed_check.AutoSize = True
         Me.BaseSet1ed_check.Checked = True
         Me.BaseSet1ed_check.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.BaseSet1ed_check.Location = New System.Drawing.Point(13, 13)
+        Me.BaseSet1ed_check.Location = New System.Drawing.Point(32, 35)
         Me.BaseSet1ed_check.Name = "BaseSet1ed_check"
         Me.BaseSet1ed_check.Size = New System.Drawing.Size(96, 17)
         Me.BaseSet1ed_check.TabIndex = 2
@@ -67,7 +73,7 @@ Partial Class Main
         'Alchemy_check
         '
         Me.Alchemy_check.AutoSize = True
-        Me.Alchemy_check.Location = New System.Drawing.Point(13, 59)
+        Me.Alchemy_check.Location = New System.Drawing.Point(32, 81)
         Me.Alchemy_check.Name = "Alchemy_check"
         Me.Alchemy_check.Size = New System.Drawing.Size(66, 17)
         Me.Alchemy_check.TabIndex = 3
@@ -76,7 +82,7 @@ Partial Class Main
         '
         'Veto_btn
         '
-        Me.Veto_btn.Location = New System.Drawing.Point(227, 200)
+        Me.Veto_btn.Location = New System.Drawing.Point(227, 222)
         Me.Veto_btn.Name = "Veto_btn"
         Me.Veto_btn.Size = New System.Drawing.Size(122, 23)
         Me.Veto_btn.TabIndex = 4
@@ -86,7 +92,7 @@ Partial Class Main
         'Error_lbl
         '
         Me.Error_lbl.AutoSize = True
-        Me.Error_lbl.Location = New System.Drawing.Point(224, 138)
+        Me.Error_lbl.Location = New System.Drawing.Point(224, 160)
         Me.Error_lbl.Name = "Error_lbl"
         Me.Error_lbl.Size = New System.Drawing.Size(45, 13)
         Me.Error_lbl.TabIndex = 5
@@ -96,7 +102,7 @@ Partial Class Main
         'Prosperity_check
         '
         Me.Prosperity_check.AutoSize = True
-        Me.Prosperity_check.Location = New System.Drawing.Point(13, 82)
+        Me.Prosperity_check.Location = New System.Drawing.Point(32, 104)
         Me.Prosperity_check.Name = "Prosperity_check"
         Me.Prosperity_check.Size = New System.Drawing.Size(72, 17)
         Me.Prosperity_check.TabIndex = 6
@@ -106,7 +112,7 @@ Partial Class Main
         'Veto_attack_check
         '
         Me.Veto_attack_check.AutoSize = True
-        Me.Veto_attack_check.Location = New System.Drawing.Point(227, 154)
+        Me.Veto_attack_check.Location = New System.Drawing.Point(227, 176)
         Me.Veto_attack_check.Name = "Veto_attack_check"
         Me.Veto_attack_check.Size = New System.Drawing.Size(123, 17)
         Me.Veto_attack_check.TabIndex = 7
@@ -116,7 +122,7 @@ Partial Class Main
         'Veto_curser_check
         '
         Me.Veto_curser_check.AutoSize = True
-        Me.Veto_curser_check.Location = New System.Drawing.Point(227, 177)
+        Me.Veto_curser_check.Location = New System.Drawing.Point(227, 199)
         Me.Veto_curser_check.Name = "Veto_curser_check"
         Me.Veto_curser_check.Size = New System.Drawing.Size(122, 17)
         Me.Veto_curser_check.TabIndex = 8
@@ -126,7 +132,7 @@ Partial Class Main
         'BaseSet2ed_check
         '
         Me.BaseSet2ed_check.AutoSize = True
-        Me.BaseSet2ed_check.Location = New System.Drawing.Point(13, 36)
+        Me.BaseSet2ed_check.Location = New System.Drawing.Point(32, 58)
         Me.BaseSet2ed_check.Name = "BaseSet2ed_check"
         Me.BaseSet2ed_check.Size = New System.Drawing.Size(96, 17)
         Me.BaseSet2ed_check.TabIndex = 9
@@ -136,18 +142,85 @@ Partial Class Main
         'DarkAges_check
         '
         Me.DarkAges_check.AutoSize = True
-        Me.DarkAges_check.Location = New System.Drawing.Point(116, 13)
+        Me.DarkAges_check.Location = New System.Drawing.Point(154, 35)
         Me.DarkAges_check.Name = "DarkAges_check"
         Me.DarkAges_check.Size = New System.Drawing.Size(76, 17)
         Me.DarkAges_check.TabIndex = 10
         Me.DarkAges_check.Text = "Dark Ages"
         Me.DarkAges_check.UseVisualStyleBackColor = True
         '
+        'RadioButtonNone
+        '
+        Me.RadioButtonNone.AutoSize = True
+        Me.RadioButtonNone.Checked = True
+        Me.RadioButtonNone.Location = New System.Drawing.Point(12, 12)
+        Me.RadioButtonNone.Name = "RadioButtonNone"
+        Me.RadioButtonNone.Size = New System.Drawing.Size(156, 17)
+        Me.RadioButtonNone.TabIndex = 11
+        Me.RadioButtonNone.TabStop = True
+        Me.RadioButtonNone.Text = "No main expantion selected"
+        Me.RadioButtonNone.UseVisualStyleBackColor = True
+        '
+        'RadioButtonBase1
+        '
+        Me.RadioButtonBase1.AutoSize = True
+        Me.RadioButtonBase1.Location = New System.Drawing.Point(12, 35)
+        Me.RadioButtonBase1.Name = "RadioButtonBase1"
+        Me.RadioButtonBase1.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonBase1.TabIndex = 12
+        Me.RadioButtonBase1.UseVisualStyleBackColor = True
+        '
+        'RadioButtonBase2
+        '
+        Me.RadioButtonBase2.AutoSize = True
+        Me.RadioButtonBase2.Enabled = False
+        Me.RadioButtonBase2.Location = New System.Drawing.Point(12, 59)
+        Me.RadioButtonBase2.Name = "RadioButtonBase2"
+        Me.RadioButtonBase2.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonBase2.TabIndex = 13
+        Me.RadioButtonBase2.UseVisualStyleBackColor = True
+        '
+        'RadioButtonAlchemy
+        '
+        Me.RadioButtonAlchemy.AutoSize = True
+        Me.RadioButtonAlchemy.Enabled = False
+        Me.RadioButtonAlchemy.Location = New System.Drawing.Point(12, 82)
+        Me.RadioButtonAlchemy.Name = "RadioButtonAlchemy"
+        Me.RadioButtonAlchemy.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonAlchemy.TabIndex = 14
+        Me.RadioButtonAlchemy.UseVisualStyleBackColor = True
+        '
+        'RadioButtonProsperity
+        '
+        Me.RadioButtonProsperity.AutoSize = True
+        Me.RadioButtonProsperity.Enabled = False
+        Me.RadioButtonProsperity.Location = New System.Drawing.Point(12, 104)
+        Me.RadioButtonProsperity.Name = "RadioButtonProsperity"
+        Me.RadioButtonProsperity.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonProsperity.TabIndex = 15
+        Me.RadioButtonProsperity.UseVisualStyleBackColor = True
+        '
+        'RadioButtonDarkAges
+        '
+        Me.RadioButtonDarkAges.AutoSize = True
+        Me.RadioButtonDarkAges.Enabled = False
+        Me.RadioButtonDarkAges.Location = New System.Drawing.Point(134, 36)
+        Me.RadioButtonDarkAges.Name = "RadioButtonDarkAges"
+        Me.RadioButtonDarkAges.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonDarkAges.TabIndex = 16
+        Me.RadioButtonDarkAges.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(360, 259)
+        Me.ClientSize = New System.Drawing.Size(362, 285)
+        Me.Controls.Add(Me.RadioButtonDarkAges)
+        Me.Controls.Add(Me.RadioButtonProsperity)
+        Me.Controls.Add(Me.RadioButtonAlchemy)
+        Me.Controls.Add(Me.RadioButtonBase2)
+        Me.Controls.Add(Me.RadioButtonBase1)
+        Me.Controls.Add(Me.RadioButtonNone)
         Me.Controls.Add(Me.DarkAges_check)
         Me.Controls.Add(Me.BaseSet2ed_check)
         Me.Controls.Add(Me.Veto_curser_check)
@@ -180,4 +253,10 @@ Partial Class Main
     Friend WithEvents Veto_curser_check As CheckBox
     Friend WithEvents BaseSet2ed_check As CheckBox
     Friend WithEvents DarkAges_check As CheckBox
+    Friend WithEvents RadioButtonNone As RadioButton
+    Friend WithEvents RadioButtonBase1 As RadioButton
+    Friend WithEvents RadioButtonBase2 As RadioButton
+    Friend WithEvents RadioButtonAlchemy As RadioButton
+    Friend WithEvents RadioButtonProsperity As RadioButton
+    Friend WithEvents RadioButtonDarkAges As RadioButton
 End Class
