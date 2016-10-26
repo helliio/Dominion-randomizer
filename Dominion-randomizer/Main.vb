@@ -106,10 +106,10 @@ Public Class Main
         End If
         If pool_list.Count > 0 Then
             If Veto_attack_check.Checked Then
-                veto_type(3)
+                Veto_type(3)
             End If
             If Veto_curser_check.Checked Then
-                veto_type(4)
+                Veto_type(4)
             End If
             If RadioButtonNone.Checked Then
                 For index As Integer = 0 To 9
