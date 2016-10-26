@@ -1,0 +1,35 @@
+﻿'Format: <sort prio>.<name>.<cost>.<is attack>.<is curser>
+Module Adventures
+    Public cards As New SortedSet(Of String) From {
+        "02.Coin Of The Realm.2.0.0",
+        "02.Page.2.1.0",
+        "02.Peasant.2.1.0",
+        "02.Ratcatcher.2.0.0",
+        "02.Raze.2.0.0",
+        "03.Amulet.3.0.0",
+        "03.Caravan Guard.3.0.0",
+        "03.Dungeon.3.0.0",
+        "03.Gear.3.0.0",
+        "03.Guide.3.0.0",
+        "04.Duplicate.4.0.0",
+        "04.Magpie.4.0.0",
+        "04.Messenger.4.0.0",
+        "04.Miser.4.0.0",
+        "04.Port.4.0.0",
+        "04.Ranger.4.0.0",
+        "04.Transmogrify.4.0.0",
+        "05.Artificer.5.0.0",
+        "05.Bridge Troll.5.1.0",
+        "05.Distant Lands.5.0.0",
+        "05.Giant.5.1.1",
+        "05.Haunted Woods.5.1.0",
+        "05.Lost City.5.0.0",
+        "05.Relic.5.1.0",
+        "05.Royal Carriage.5.0.0",
+        "05.Storyteller.5.0.0",
+        "05.Swamp Hag.5.1.1",
+        "05.Treasure Trove.5.0.0",
+        "05.Wine Merchant.5.0.0",
+        "06.Hireling.6.0.0"
+    }
+End Module

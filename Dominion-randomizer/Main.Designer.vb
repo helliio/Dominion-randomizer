@@ -45,6 +45,8 @@ Partial Class Main
         Me.Intrigue1ed_check = New System.Windows.Forms.CheckBox()
         Me.RadioButtonIntrigue2 = New System.Windows.Forms.RadioButton()
         Me.Intrigue2ed_check = New System.Windows.Forms.CheckBox()
+        Me.RadioButtonAdventures = New System.Windows.Forms.RadioButton()
+        Me.Adventures_check = New System.Windows.Forms.CheckBox()
         CType(Me.NumericUpDownExp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -276,11 +278,33 @@ Partial Class Main
         Me.Intrigue2ed_check.Text = "Intrigue 2 ed."
         Me.Intrigue2ed_check.UseVisualStyleBackColor = True
         '
+        'RadioButtonAdventures
+        '
+        Me.RadioButtonAdventures.AutoSize = True
+        Me.RadioButtonAdventures.Enabled = False
+        Me.RadioButtonAdventures.Location = New System.Drawing.Point(133, 106)
+        Me.RadioButtonAdventures.Name = "RadioButtonAdventures"
+        Me.RadioButtonAdventures.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonAdventures.TabIndex = 24
+        Me.RadioButtonAdventures.UseVisualStyleBackColor = True
+        '
+        'Adventures_check
+        '
+        Me.Adventures_check.AutoSize = True
+        Me.Adventures_check.Location = New System.Drawing.Point(153, 105)
+        Me.Adventures_check.Name = "Adventures_check"
+        Me.Adventures_check.Size = New System.Drawing.Size(80, 17)
+        Me.Adventures_check.TabIndex = 23
+        Me.Adventures_check.Text = "Adventures"
+        Me.Adventures_check.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(393, 285)
+        Me.Controls.Add(Me.RadioButtonAdventures)
+        Me.Controls.Add(Me.Adventures_check)
         Me.Controls.Add(Me.RadioButtonIntrigue2)
         Me.Controls.Add(Me.Intrigue2ed_check)
         Me.Controls.Add(Me.RadioButtonIntrigue1)
@@ -338,4 +362,6 @@ Partial Class Main
     Friend WithEvents Intrigue1ed_check As CheckBox
     Friend WithEvents RadioButtonIntrigue2 As RadioButton
     Friend WithEvents Intrigue2ed_check As CheckBox
+    Friend WithEvents RadioButtonAdventures As RadioButton
+    Friend WithEvents Adventures_check As CheckBox
 End Class

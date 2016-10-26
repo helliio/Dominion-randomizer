@@ -101,6 +101,9 @@ Public Class Main
         If DarkAges_check.Checked Then
             pool_list.UnionWith(DarkAges.cards)
         End If
+        If Adventures_check.Checked Then
+            pool_list.UnionWith(Adventures.cards)
+        End If
         If pool_list.Count > 0 Then
             If Veto_attack_check.Checked Then
                 veto_type(3)
@@ -140,6 +143,8 @@ Public Class Main
                 Main_exp(Prosperity.cards)
             ElseIf RadioButtonDarkAges.Checked Then
                 Main_exp(DarkAges.cards)
+            ElseIf RadioButtonAdventures.Checked Then
+                Main_exp(Adventures.cards)
             End If
             For Each item As String In ret_list
                 Dim isolated_card_values = Split(item, ".")
@@ -201,5 +206,9 @@ Public Class Main
 
     Private Sub DarkAges_check_CheckedChanged(sender As Object, e As EventArgs) Handles DarkAges_check.CheckedChanged
         Radio_state_change(RadioButtonDarkAges, DarkAges_check)
+    End Sub
+
+    Private Sub Adventures_check_CheckedChanged(sender As Object, e As EventArgs) Handles Adventures_check.CheckedChanged
+        Radio_state_change(RadioButtonAdventures, Adventures_check)
     End Sub
 End Class
