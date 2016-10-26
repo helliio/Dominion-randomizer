@@ -47,6 +47,8 @@ Partial Class Main
         Me.Intrigue2ed_check = New System.Windows.Forms.CheckBox()
         Me.RadioButtonAdventures = New System.Windows.Forms.RadioButton()
         Me.Adventures_check = New System.Windows.Forms.CheckBox()
+        Me.RadioButtonEmpires = New System.Windows.Forms.RadioButton()
+        Me.Empires_check = New System.Windows.Forms.CheckBox()
         CType(Me.NumericUpDownExp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -298,11 +300,33 @@ Partial Class Main
         Me.Adventures_check.Text = "Adventures"
         Me.Adventures_check.UseVisualStyleBackColor = True
         '
+        'RadioButtonEmpires
+        '
+        Me.RadioButtonEmpires.AutoSize = True
+        Me.RadioButtonEmpires.Enabled = False
+        Me.RadioButtonEmpires.Location = New System.Drawing.Point(223, 38)
+        Me.RadioButtonEmpires.Name = "RadioButtonEmpires"
+        Me.RadioButtonEmpires.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonEmpires.TabIndex = 26
+        Me.RadioButtonEmpires.UseVisualStyleBackColor = True
+        '
+        'Empires_check
+        '
+        Me.Empires_check.AutoSize = True
+        Me.Empires_check.Location = New System.Drawing.Point(243, 37)
+        Me.Empires_check.Name = "Empires_check"
+        Me.Empires_check.Size = New System.Drawing.Size(63, 17)
+        Me.Empires_check.TabIndex = 25
+        Me.Empires_check.Text = "Empires"
+        Me.Empires_check.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(393, 285)
+        Me.Controls.Add(Me.RadioButtonEmpires)
+        Me.Controls.Add(Me.Empires_check)
         Me.Controls.Add(Me.RadioButtonAdventures)
         Me.Controls.Add(Me.Adventures_check)
         Me.Controls.Add(Me.RadioButtonIntrigue2)
@@ -364,4 +388,6 @@ Partial Class Main
     Friend WithEvents Intrigue2ed_check As CheckBox
     Friend WithEvents RadioButtonAdventures As RadioButton
     Friend WithEvents Adventures_check As CheckBox
+    Friend WithEvents RadioButtonEmpires As RadioButton
+    Friend WithEvents Empires_check As CheckBox
 End Class
