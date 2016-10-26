@@ -47,13 +47,13 @@ Public Class Main
     Sub Main_exp(ByVal expantion As SortedSet(Of String))
         Dim exp_list As New SortedSet(Of String)
         exp_list.UnionWith(expantion)
-        For index As Integer = 0 To 4
+        For index As Integer = 0 To NumericUpDownExp.Value - 1
             Dim picked_card = exp_list(rnd.Next(0, exp_list.Count))
             ret_list.Add(picked_card)
             exp_list.Remove(picked_card)
             pool_list.Remove(picked_card)
         Next
-        For index As Integer = 5 To 9
+        For index As Integer = NumericUpDownExp.Value To 9
             Dim picked_card = pool_list(rnd.Next(0, pool_list.Count))
             ret_list.Add(picked_card)
             pool_list.Remove(picked_card)

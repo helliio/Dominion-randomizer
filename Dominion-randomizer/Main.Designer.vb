@@ -39,13 +39,16 @@ Partial Class Main
         Me.RadioButtonAlchemy = New System.Windows.Forms.RadioButton()
         Me.RadioButtonProsperity = New System.Windows.Forms.RadioButton()
         Me.RadioButtonDarkAges = New System.Windows.Forms.RadioButton()
+        Me.NumericUpDownExp = New System.Windows.Forms.NumericUpDown()
+        Me.Label1 = New System.Windows.Forms.Label()
+        CType(Me.NumericUpDownExp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Generate_btn
         '
         Me.Generate_btn.Location = New System.Drawing.Point(227, 251)
         Me.Generate_btn.Name = "Generate_btn"
-        Me.Generate_btn.Size = New System.Drawing.Size(123, 23)
+        Me.Generate_btn.Size = New System.Drawing.Size(158, 23)
         Me.Generate_btn.TabIndex = 0
         Me.Generate_btn.Text = "Generate"
         Me.Generate_btn.UseVisualStyleBackColor = True
@@ -84,7 +87,7 @@ Partial Class Main
         '
         Me.Veto_btn.Location = New System.Drawing.Point(227, 222)
         Me.Veto_btn.Name = "Veto_btn"
-        Me.Veto_btn.Size = New System.Drawing.Size(122, 23)
+        Me.Veto_btn.Size = New System.Drawing.Size(158, 23)
         Me.Veto_btn.TabIndex = 4
         Me.Veto_btn.Text = "Veto"
         Me.Veto_btn.UseVisualStyleBackColor = True
@@ -92,7 +95,7 @@ Partial Class Main
         'Error_lbl
         '
         Me.Error_lbl.AutoSize = True
-        Me.Error_lbl.Location = New System.Drawing.Point(224, 160)
+        Me.Error_lbl.Location = New System.Drawing.Point(227, 139)
         Me.Error_lbl.Name = "Error_lbl"
         Me.Error_lbl.Size = New System.Drawing.Size(45, 13)
         Me.Error_lbl.TabIndex = 5
@@ -112,7 +115,7 @@ Partial Class Main
         'Veto_attack_check
         '
         Me.Veto_attack_check.AutoSize = True
-        Me.Veto_attack_check.Location = New System.Drawing.Point(227, 176)
+        Me.Veto_attack_check.Location = New System.Drawing.Point(230, 176)
         Me.Veto_attack_check.Name = "Veto_attack_check"
         Me.Veto_attack_check.Size = New System.Drawing.Size(123, 17)
         Me.Veto_attack_check.TabIndex = 7
@@ -122,7 +125,7 @@ Partial Class Main
         'Veto_curser_check
         '
         Me.Veto_curser_check.AutoSize = True
-        Me.Veto_curser_check.Location = New System.Drawing.Point(227, 199)
+        Me.Veto_curser_check.Location = New System.Drawing.Point(230, 199)
         Me.Veto_curser_check.Name = "Veto_curser_check"
         Me.Veto_curser_check.Size = New System.Drawing.Size(122, 17)
         Me.Veto_curser_check.TabIndex = 8
@@ -210,11 +213,32 @@ Partial Class Main
         Me.RadioButtonDarkAges.TabIndex = 16
         Me.RadioButtonDarkAges.UseVisualStyleBackColor = True
         '
+        'NumericUpDownExp
+        '
+        Me.NumericUpDownExp.Location = New System.Drawing.Point(329, 155)
+        Me.NumericUpDownExp.Maximum = New Decimal(New Integer() {9, 0, 0, 0})
+        Me.NumericUpDownExp.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericUpDownExp.Name = "NumericUpDownExp"
+        Me.NumericUpDownExp.Size = New System.Drawing.Size(56, 20)
+        Me.NumericUpDownExp.TabIndex = 17
+        Me.NumericUpDownExp.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(227, 157)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(96, 13)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Minimum main exp:"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(362, 285)
+        Me.ClientSize = New System.Drawing.Size(393, 285)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.NumericUpDownExp)
         Me.Controls.Add(Me.RadioButtonDarkAges)
         Me.Controls.Add(Me.RadioButtonProsperity)
         Me.Controls.Add(Me.RadioButtonAlchemy)
@@ -237,6 +261,7 @@ Partial Class Main
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dominion Randomizer"
+        CType(Me.NumericUpDownExp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -259,4 +284,6 @@ Partial Class Main
     Friend WithEvents RadioButtonAlchemy As RadioButton
     Friend WithEvents RadioButtonProsperity As RadioButton
     Friend WithEvents RadioButtonDarkAges As RadioButton
+    Friend WithEvents NumericUpDownExp As NumericUpDown
+    Friend WithEvents Label1 As Label
 End Class
