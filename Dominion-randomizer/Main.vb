@@ -84,6 +84,14 @@ Public Class Main
             pool_list.UnionWith(BaseSet.cards_common)
             pool_list.UnionWith(BaseSet.cards_2ed)
         End If
+        If Intrigue1ed_check.Checked Then
+            pool_list.UnionWith(Intrigue.cards_common)
+            pool_list.UnionWith(Intrigue.cards_1ed)
+        End If
+        If Intrigue2ed_check.Checked Then
+            pool_list.UnionWith(Intrigue.cards_common)
+            pool_list.UnionWith(Intrigue.cards_2ed)
+        End If
         If Alchemy_check.Checked Then
             pool_list.UnionWith(Alchemy.cards)
         End If
@@ -114,6 +122,16 @@ Public Class Main
             ElseIf RadioButtonBase2.Checked Then
                 temp_list.UnionWith(BaseSet.cards_common)
                 temp_list.UnionWith(BaseSet.cards_2ed)
+                Main_exp(temp_list)
+                temp_list.Clear()
+            ElseIf RadioButtonIntrigue1.Checked Then
+                temp_list.UnionWith(Intrigue.cards_common)
+                temp_list.UnionWith(Intrigue.cards_1ed)
+                Main_exp(temp_list)
+                temp_list.Clear()
+            ElseIf RadioButtonIntrigue2.Checked Then
+                temp_list.UnionWith(Intrigue.cards_common)
+                temp_list.UnionWith(Intrigue.cards_2ed)
                 Main_exp(temp_list)
                 temp_list.Clear()
             ElseIf RadioButtonAlchemy.Checked Then
@@ -163,6 +181,14 @@ Public Class Main
 
     Private Sub BaseSet2ed_check_CheckedChanged(sender As Object, e As EventArgs) Handles BaseSet2ed_check.CheckedChanged
         Radio_state_change(RadioButtonBase2, BaseSet2ed_check)
+    End Sub
+
+    Private Sub Intrigue1ed_check_CheckedChanged(sender As Object, e As EventArgs) Handles Intrigue1ed_check.CheckedChanged
+        Radio_state_change(RadioButtonIntrigue1, Intrigue1ed_check)
+    End Sub
+
+    Private Sub Intrigue2ed_check_CheckedChanged(sender As Object, e As EventArgs) Handles Intrigue2ed_check.CheckedChanged
+        Radio_state_change(RadioButtonIntrigue2, Intrigue2ed_check)
     End Sub
 
     Private Sub Alchemy_check_CheckedChanged(sender As Object, e As EventArgs) Handles Alchemy_check.CheckedChanged

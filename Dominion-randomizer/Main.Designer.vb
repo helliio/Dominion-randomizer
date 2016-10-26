@@ -41,6 +41,10 @@ Partial Class Main
         Me.RadioButtonDarkAges = New System.Windows.Forms.RadioButton()
         Me.NumericUpDownExp = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.RadioButtonIntrigue1 = New System.Windows.Forms.RadioButton()
+        Me.Intrigue1ed_check = New System.Windows.Forms.CheckBox()
+        Me.RadioButtonIntrigue2 = New System.Windows.Forms.RadioButton()
+        Me.Intrigue2ed_check = New System.Windows.Forms.CheckBox()
         CType(Me.NumericUpDownExp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -76,7 +80,7 @@ Partial Class Main
         'Alchemy_check
         '
         Me.Alchemy_check.AutoSize = True
-        Me.Alchemy_check.Location = New System.Drawing.Point(32, 81)
+        Me.Alchemy_check.Location = New System.Drawing.Point(153, 36)
         Me.Alchemy_check.Name = "Alchemy_check"
         Me.Alchemy_check.Size = New System.Drawing.Size(66, 17)
         Me.Alchemy_check.TabIndex = 3
@@ -105,7 +109,7 @@ Partial Class Main
         'Prosperity_check
         '
         Me.Prosperity_check.AutoSize = True
-        Me.Prosperity_check.Location = New System.Drawing.Point(32, 104)
+        Me.Prosperity_check.Location = New System.Drawing.Point(153, 59)
         Me.Prosperity_check.Name = "Prosperity_check"
         Me.Prosperity_check.Size = New System.Drawing.Size(72, 17)
         Me.Prosperity_check.TabIndex = 6
@@ -145,7 +149,7 @@ Partial Class Main
         'DarkAges_check
         '
         Me.DarkAges_check.AutoSize = True
-        Me.DarkAges_check.Location = New System.Drawing.Point(154, 35)
+        Me.DarkAges_check.Location = New System.Drawing.Point(153, 82)
         Me.DarkAges_check.Name = "DarkAges_check"
         Me.DarkAges_check.Size = New System.Drawing.Size(76, 17)
         Me.DarkAges_check.TabIndex = 10
@@ -187,7 +191,7 @@ Partial Class Main
         '
         Me.RadioButtonAlchemy.AutoSize = True
         Me.RadioButtonAlchemy.Enabled = False
-        Me.RadioButtonAlchemy.Location = New System.Drawing.Point(12, 82)
+        Me.RadioButtonAlchemy.Location = New System.Drawing.Point(133, 37)
         Me.RadioButtonAlchemy.Name = "RadioButtonAlchemy"
         Me.RadioButtonAlchemy.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonAlchemy.TabIndex = 14
@@ -197,7 +201,7 @@ Partial Class Main
         '
         Me.RadioButtonProsperity.AutoSize = True
         Me.RadioButtonProsperity.Enabled = False
-        Me.RadioButtonProsperity.Location = New System.Drawing.Point(12, 104)
+        Me.RadioButtonProsperity.Location = New System.Drawing.Point(133, 59)
         Me.RadioButtonProsperity.Name = "RadioButtonProsperity"
         Me.RadioButtonProsperity.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonProsperity.TabIndex = 15
@@ -207,7 +211,7 @@ Partial Class Main
         '
         Me.RadioButtonDarkAges.AutoSize = True
         Me.RadioButtonDarkAges.Enabled = False
-        Me.RadioButtonDarkAges.Location = New System.Drawing.Point(134, 36)
+        Me.RadioButtonDarkAges.Location = New System.Drawing.Point(133, 83)
         Me.RadioButtonDarkAges.Name = "RadioButtonDarkAges"
         Me.RadioButtonDarkAges.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonDarkAges.TabIndex = 16
@@ -232,11 +236,55 @@ Partial Class Main
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Minimum main exp:"
         '
+        'RadioButtonIntrigue1
+        '
+        Me.RadioButtonIntrigue1.AutoSize = True
+        Me.RadioButtonIntrigue1.Enabled = False
+        Me.RadioButtonIntrigue1.Location = New System.Drawing.Point(12, 81)
+        Me.RadioButtonIntrigue1.Name = "RadioButtonIntrigue1"
+        Me.RadioButtonIntrigue1.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonIntrigue1.TabIndex = 20
+        Me.RadioButtonIntrigue1.UseVisualStyleBackColor = True
+        '
+        'Intrigue1ed_check
+        '
+        Me.Intrigue1ed_check.AutoSize = True
+        Me.Intrigue1ed_check.Location = New System.Drawing.Point(32, 80)
+        Me.Intrigue1ed_check.Name = "Intrigue1ed_check"
+        Me.Intrigue1ed_check.Size = New System.Drawing.Size(88, 17)
+        Me.Intrigue1ed_check.TabIndex = 19
+        Me.Intrigue1ed_check.Text = "Intrigue 1 ed."
+        Me.Intrigue1ed_check.UseVisualStyleBackColor = True
+        '
+        'RadioButtonIntrigue2
+        '
+        Me.RadioButtonIntrigue2.AutoSize = True
+        Me.RadioButtonIntrigue2.Enabled = False
+        Me.RadioButtonIntrigue2.Location = New System.Drawing.Point(12, 105)
+        Me.RadioButtonIntrigue2.Name = "RadioButtonIntrigue2"
+        Me.RadioButtonIntrigue2.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonIntrigue2.TabIndex = 22
+        Me.RadioButtonIntrigue2.UseVisualStyleBackColor = True
+        '
+        'Intrigue2ed_check
+        '
+        Me.Intrigue2ed_check.AutoSize = True
+        Me.Intrigue2ed_check.Location = New System.Drawing.Point(32, 104)
+        Me.Intrigue2ed_check.Name = "Intrigue2ed_check"
+        Me.Intrigue2ed_check.Size = New System.Drawing.Size(88, 17)
+        Me.Intrigue2ed_check.TabIndex = 21
+        Me.Intrigue2ed_check.Text = "Intrigue 2 ed."
+        Me.Intrigue2ed_check.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(393, 285)
+        Me.Controls.Add(Me.RadioButtonIntrigue2)
+        Me.Controls.Add(Me.Intrigue2ed_check)
+        Me.Controls.Add(Me.RadioButtonIntrigue1)
+        Me.Controls.Add(Me.Intrigue1ed_check)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.NumericUpDownExp)
         Me.Controls.Add(Me.RadioButtonDarkAges)
@@ -286,4 +334,8 @@ Partial Class Main
     Friend WithEvents RadioButtonDarkAges As RadioButton
     Friend WithEvents NumericUpDownExp As NumericUpDown
     Friend WithEvents Label1 As Label
+    Friend WithEvents RadioButtonIntrigue1 As RadioButton
+    Friend WithEvents Intrigue1ed_check As CheckBox
+    Friend WithEvents RadioButtonIntrigue2 As RadioButton
+    Friend WithEvents Intrigue2ed_check As CheckBox
 End Class
