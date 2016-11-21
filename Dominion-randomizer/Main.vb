@@ -28,7 +28,7 @@ Public Class Main
     Dim split_line As String = "---New cards---"
     Dim egg As New EasterEgg(5)
 
-    'Veto_type removes cards from pool_list with a certain type only usable if input variable is >= 3
+    'Veto_type removes cards from pool_list with a certain type only usable if input variable is >= 3 (third flag)
     Sub Veto_type(n As Integer)
         If n >= 3 Then
             Dim veto_list As New List(Of String)
